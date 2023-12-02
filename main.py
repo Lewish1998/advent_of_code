@@ -1,4 +1,5 @@
 numbers = ['1','2','3','4','5','6','7','8','9','0']
+grand_total = 0
 
 with open('day_1.txt', 'r') as file:
     string_data = file.readlines()
@@ -19,12 +20,17 @@ with open('day_1.txt', 'r') as file:
             
             if len(str(number)) < 2:
                 new_numbers.append(number[0])
+                
+                grand_total += int(new_numbers[0])
+                
             else: 
                 new_numbers.append(number[0])
                 new_numbers.append(number[-1])
-            
-            # if len(str(number)) > 1:
-            #     new_numbers.append(number[-1])
-            #     print(new_numbers)
+                
+                grand_total += (int(new_numbers[0]) + int(new_numbers[-1]))
+                
+                
+    print(grand_total)
+                
 
-print(new_numbers[1])
+            
