@@ -13,7 +13,6 @@ def password_cracker(input: list[str]):
             for _ in range(right):
                 cur += 1
                 if cur == 100:
-                    zero_count += 1
                     cur = 0
                 if cur == 0:
                     zero_count += 1
@@ -23,7 +22,6 @@ def password_cracker(input: list[str]):
             for _ in range(left):
                 cur -= 1
                 if cur == -1:
-                    zero_count += 1
                     cur = 99
                 if cur == 0:
                     zero_count += 1
